@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# This script print the ports  open and the programs associated to this ports.
-
-netstat -tulnp
