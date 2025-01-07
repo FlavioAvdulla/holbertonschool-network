@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-#Bash script that displays listening port and PID and name of the program
-netstat -lp
+# use comand netstat for show port UDP TCP
+
+netstat -l
+netstat -p
