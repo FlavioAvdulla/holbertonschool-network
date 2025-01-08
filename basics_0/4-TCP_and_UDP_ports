@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# use comand netstat for show port UDP TCP
+# This script print the ports  open and the programs associated to this ports.
 
-netstat -l
-netstat -p
+netstat -tulnp
