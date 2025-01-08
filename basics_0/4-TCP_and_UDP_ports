@@ -1,5 +1,15 @@
-#!/usr/bin/env bash
-# use comand netstat for show port UDP TCP
+#!/bin/bash
+# List all listening TCP/UDP ports along with the PID and program name
 
-netstat -l
-netstat -p
+echo "Active Internet connections (only servers)"
+echo "Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name"
+
+# List TCP ports
+netstat -tuln | grep LISTEN | awk 'NR>2 {print $1, $4, $7}' | while read line; do
+    proto=$(echo $line | awk '{print $1}')
+    local_address=$(echo $line | awk '{print $2}')
+    pid_program=$(echo $line | awk '{print $3}')
+    pid=$(echo $pid_program | cut -d'/' -f1)
+    program=$(echo $pid_program | cut -d'/' -f2)
+    echo "$proto $local_address  LISTEN  $pid/$program"
+done
