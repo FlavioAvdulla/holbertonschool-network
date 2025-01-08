@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# This script print the ports  open and the programs associated to this ports.
-
-netstat -tulnp
+#Bash script that displays listening port and PID and name of the program
+netstat -lp
