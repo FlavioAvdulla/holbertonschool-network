@@ -1,0 +1,32 @@
+What happens when you type google.com in your browser and press Enter
+
+Today, most of the tools at our disposal make our life a whole lot easier. In essence that is what technology is about. When we need to be up to date on the latest news we might open our TV and change the channels with our remote and be oblivious to the fascinating operations done behind-the-scenes, millisecond after millisecond. Personally, I really enjoy understanding more and more about all the stuff that makes our life easier and how they achieve that affect.
+
+When it comes to Google there is a whole lot done behind the scenes, but today we’ll be looking into what happens when we write google.com on our browser.
+
+DNS Servers
+Every website has its own virtual space which we can find if we know the virtual address. That is what an IP address is, and by knowing it, we can access the website in said address. But computers don’t understand names or words, only numbers. So how is it that the browser understands what “google.com” actually means ?
+
+DNS Resolver — The answer is DNS Resolvers. DNS Resolvers are servers that are able to cross-reference a URL (google.com in our instance) into an IP address. The Resolver first looks at the local cache to find the IP address as a DNS record. When nothing can be found. The Resolver goes to the Root Name server.
+Root Name Server — The Root Name itself does not contain the IP Address or any DNS records, but instead can redirect the Resolver to the appropriate Top-Level Domains(.com, .org, .net). In our case, we would go into the .com TLD.
+Top-Level Domain Server — The Top-Level Domain Server contains the information about all the TLD and knows which authoritative DNS contains the IP Address we are looking for.
+Authoritative DNS — This is where we get the answer. The Authoritative DNS contains the IP Address for google.com responds with said address to the Resolver.
+TCP/IP Connection
+After making a request to the IP Address, a TCP/IP connection is made, which establishes a communications between the 2 networks. The Transmission Control Protocol (TCP for short) works by sending data through the network by breaking it down, making sure that the data is transmitted and reassembling it on the other side of the connection. This way the exchange is made efficiently and securely.
+
+Firewall
+The firewall is a security system that handles incoming and outgoing traffic, as well as monitors them. It implements various techniques to do so. Some techniques are Packet Filtering, where it scans packets of data against predefined rules, and Deep Packet Inspections, where the packets are examined and checked for harmful data such as malware.
+
+Load Balancing
+After getting through the firewall, we enter the Load Balancing server, which implements a certain algorithm to share the traffic of a busy website, across multiple servers, thus distributing the workload that would otherwise go to one server, among many servers.
+
+Web Server
+The web server has the function of hosting and serving the web content. Upon an initial request it returns a HTML file which contains the website. More often than not, it works in tandem with the application server to make the website itself more dynamic.
+
+Application Server
+The application server is where all the business logic of the website is handled. For instance, when you search for something on Google, the logic for getting you those search results is implemented here.
+
+Database
+We use databases to efficiently store and retrieve the data we need. The database serves this data to the Application Server.
+
+In conclusion, the simple act of typing “google.com” and hitting Enter initiates a lot of mind-boggling processes behind the scenes, from DNS lookups and establishing connections to securing data and managing traffic loads. Each component, from the DNS resolver to the application server, plays a crucial role in ensuring that information reaches us quickly and reliably. Understanding these technologies not only helps us appreciate the complexity of the internet but also empowers us to harness its full potential in our everyday lives.
