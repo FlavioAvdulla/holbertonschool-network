@@ -51,11 +51,6 @@ Add a schema to your blog post illustrating the flow of the request created when
 
 Gliffy is free and what I personally use, but feel free to use what fits you best.
 
-Some unrelated examples:
-
-![Example Diagram 1](URL)
-![Example Diagram 2](URL)
-
 Share the URL of your diagram image in your answer file and in the field below.
 
 Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
